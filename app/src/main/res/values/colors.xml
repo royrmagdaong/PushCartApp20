@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#043652</color>
+    <color name="colorPrimaryDark">#022C42</color>
+    <color name="colorAccent">#48F006</color>
+
+
+
+    <color name="On">#48F006</color>
+    <color name="Off">#464545</color>
+
+    <color name="outOfStock">#F81919</color>
+    <color name="Black">#000</color>
+</resources>

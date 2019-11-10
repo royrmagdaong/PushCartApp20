@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">PushCartApp2.0</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Push Cart App</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_category">Category</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_queue">Queue</string>
+    <string name="menu_addItem">Add Product</string>
+
+    <string-array name="category_arrays">
+        <item>All</item>
+        <item>Baby Needs</item>
+        <item>Beverages</item>
+        <item>Canned/Packaged Foods</item>
+        <item>Cereals</item>
+        <item>Chips</item>
+        <item>Cleaners</item>
+        <item>Dairy</item>
+        <item>Fish</item>
+        <item>Fruits</item>
+        <item>Meat</item>
+        <item>Powdered Drink</item>
+        <item>Seasonings</item>
+        <item>Soap/Shampoo</item>
+        <item>Vegetables</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
