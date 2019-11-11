@@ -110,7 +110,8 @@ public class CartFragment extends Fragment {
                                         params.put("price",String.valueOf(cartItem.getPrice()));
                                         params.put("quan",String.valueOf(cartItem.getQuantity()));
                                         params.put("total_price",String.valueOf((float) cartItem.getQuantity() * cartItem.getPrice()));
-
+                                        params.put("discount",String.valueOf(cartItem.getDiscount()));
+                                        params.put("promo",String.valueOf(cartItem.getPromo()));
                                         return params;
                                     }
                                 };

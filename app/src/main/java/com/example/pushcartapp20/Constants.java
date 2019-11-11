@@ -8,6 +8,7 @@ public class Constants {
     public static String URL_GETQUEUE = ROOT_URL+ "getQueue.php";
     public static String URL_LOGIN = ROOT_URL+ "userLogin.php";
     public static String URL_GETALLPRODUCTS = ROOT_URL+ "getProducts.php";
+    public static String URL_GETSAMPLE = ROOT_URL+ "getSample.php";
 
     public static int CART_NUMBER = 3;
     public static String ADMINPASSWORD = "123321";

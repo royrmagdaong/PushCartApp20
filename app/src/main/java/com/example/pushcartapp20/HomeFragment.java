@@ -35,6 +35,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -47,6 +49,8 @@ import org.json.JSONObject;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class HomeFragment extends Fragment {
@@ -55,7 +59,6 @@ public class HomeFragment extends Fragment {
     Button searchButton, addToCartBtn;
     CheckBox checkBox_SNRPWD;
     TextView SENIORPWD;
-
 
 
     static TextView prodName, prodPrice, prodStock, prodCategory,equalSign, minusSign, txtDiscount, priceLessDiscount;
@@ -102,6 +105,7 @@ public class HomeFragment extends Fragment {
        equalSign = view.findViewById(R.id.equalSign);
        txtDiscount = view.findViewById(R.id.productDiscount);
        priceLessDiscount = view.findViewById(R.id.priceLessDiscount);
+
 
 
         dialog = new Dialog(getContext());
@@ -270,7 +274,7 @@ public class HomeFragment extends Fragment {
             recyclerView.setAdapter(categoryRecyclerAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         }else{
-            StringRequest stringRequest = new StringRequest(Request.Method.GET, Constants.URL_GETALLPRODUCTS,
+            StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://"+Constants.IPADDRESS+"/pushcart/v1/getProducts.php",
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -298,22 +302,26 @@ public class HomeFragment extends Fragment {
                                 recyclerView.setAdapter(categoryRecyclerAdapter);
                                 recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+                                //Toast.makeText(getContext(), "HEEEERRREEE", Toast.LENGTH_SHORT).show();
+
                                 //init spinner in online mode
                                 initSpinner();
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                //Toast.makeText(getContext(), "What "+e.toString(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     },
                     new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-
+                            //Toast.makeText(getContext(), "Who "+error.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
             //adding our stringrequest to queue
             Volley.newRequestQueue(getContext()).add(stringRequest);
+
         }
 
     }

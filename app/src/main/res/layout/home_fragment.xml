@@ -181,7 +181,6 @@
             android:textColor="@android:color/background_light"
             android:background="@color/colorPrimaryDark"
             android:text="SEARCH" />
-
     </LinearLayout>
 
 

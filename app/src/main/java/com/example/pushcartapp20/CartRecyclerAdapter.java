@@ -181,7 +181,6 @@ public class CartRecyclerAdapter extends RecyclerView.Adapter<CartRecyclerAdapte
 
                         //notifyDataSetChanged();
 
-
 //                        if (groceryItems.size()<1){
 //                            CartFragment.updateTotalPrice("P0.00");
 //                        }
