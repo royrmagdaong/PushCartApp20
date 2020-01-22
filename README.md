@@ -1,11 +1,14 @@
 # PushCartApp20
-push cart app
+```
+  this project is already finished, it was made just to comply for school requirements.
+```
 
+### Project Description
+ - pushcart android application that can locate products, view promos and display available stocks inside the store.
+ - you can also add product to its cart and send it to cashier.
+ - it has an admin application that monitors customer queue. 
 
-pushcart application that can locate products, view promos and display available stocks inside the store.
-
-
-## Technology and language used 
+### Technology used 
 1. Android Studio
 2. Java
 3. Xampp
